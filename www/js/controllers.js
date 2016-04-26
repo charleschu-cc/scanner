@@ -4,7 +4,6 @@ angular.module('starter.controllers', [])
     var vm = this;
 
     $scope.scan = function(){
-        console.log('scan called');
         $ionicPlatform.ready(function() {
             $cordovaBarcodeScanner
             .scan()
@@ -17,10 +16,6 @@ angular.module('starter.controllers', [])
                 $scope.scanResults = 'Error: ' + error;
             });
         });
-    };
-    
-    $scope.qrscan = function() {
-      console.log('qrscan');
     };
 
     $scope.scanResults = '[test] http://google.com';
